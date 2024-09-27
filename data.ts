@@ -1,120 +1,143 @@
-import { Note, CorrectAnswer, Answer } from './interfaces'
+import { Note, CorrectAnswer, Answer, Difficulty } from './interfaces'
 
 const Notes: Note[] = [
     {
         id: 1,
         name: 'a3',
-        image: 'images/A3 (Hard).jpeg'
+        image: 'images/A3 (Hard).jpeg',
+        difficulty: Difficulty.HARD
     },
     {
         id: 2,
         name: 'a4',
-        image: 'images/A4 (Easy).jpeg'
+        image: 'images/A4 (Easy).jpeg',
+        difficulty: Difficulty.EASY
     },
     {
         id: 3,
         name: 'a5',
-        image: 'images/A5 (Hard).jpeg'
+        image: 'images/A5 (Hard).jpeg',
+        difficulty: Difficulty.HARD
     },
     {
         id: 4,
         name: 'b3',
-        image: 'images/B3 (Hard).jpeg'
+        image: 'images/B3 (Hard).jpeg',
+        difficulty: Difficulty.HARD
     },
     {
         id: 5,
         name: 'b4',
-        image: 'images/B4 (Easy).jpeg'
+        image: 'images/B4 (Easy).jpeg',
+        difficulty: Difficulty.EASY
     },
     {
         id: 6,
         name: 'b5',
-        image: 'images/B5 (Hard).jpeg'
+        image: 'images/B5 (Hard).jpeg',
+        difficulty: Difficulty.HARD
     },
     {
         id: 7,
         name: 'c4',
-        image: 'images/C4 (Hard).jpeg'
+        image: 'images/C4 (Hard).jpeg',
+        difficulty: Difficulty.HARD
     },
     {
         id: 8,
         name: 'c5',
-        image: 'images/C5 (Easy).jpeg'
+        image: 'images/C5 (Easy).jpeg',
+        difficulty: Difficulty.EASY
     },
     {
         id: 9,
         name: 'c6',
-        image: 'images/C6 (Hard).jpeg'
+        image: 'images/C6 (Hard).jpeg',
+        difficulty: Difficulty.HARD
     },
     {
         id: 10,
         name: 'd4',
-        image: 'images/D4 (Hard).jpeg'
+        image: 'images/D4 (Hard).jpeg',
+        difficulty: Difficulty.HARD
     },
     {
         id: 11,
         name: 'd5',
-        image: 'images/D5 (Easy).jpeg'
+        image: 'images/D5 (Easy).jpeg',
+        difficulty: Difficulty.EASY
     },
     {
         id: 12,
         name: 'd6',
-        image: 'images/D6 (Hard).jpeg'
+        image: 'images/D6 (Hard).jpeg',
+        difficulty: Difficulty.HARD
     }, 
     {
         id: 13,
         name: 'e3',
-        image: 'images/E3 (Hard).jpeg'
+        image: 'images/E3 (Hard).jpeg',
+        difficulty: Difficulty.HARD
     },
     {
         id: 14,
         name: 'e4',
-        image: 'images/E4 (Easy).jpeg'
+        image: 'images/E4 (Easy).jpeg',
+        difficulty: Difficulty.EASY
     },
     {
         id: 15,
         name: 'e5',
-        image: 'images/E5 (Easy).jpeg'
+        image: 'images/E5 (Easy).jpeg',
+        difficulty: Difficulty.EASY
     },
     {
         id: 16,
         name: 'e6',
-        image: 'images/B6 (Hard).jpeg'
+        image: 'images/B6 (Hard).jpeg',
+        difficulty: Difficulty.HARD
     },
     {
         id: 17,
         name: 'f3',
-        image: 'images/F3 (Hard).jpeg'
+        image: 'images/F3 (Hard).jpeg',
+        difficulty: Difficulty.HARD
     },
     {
         id: 18,
         name: 'f4',
-        image: 'images/F4 (Hard).jpeg'
+        image: 'images/F4 (Hard).jpeg',
+        difficulty: Difficulty.HARD
     },
     {
         id: 19,
         name: 'f5',
-        image: 'images/F5 (Hard).jpeg'
+        image: 'images/F5 (Hard).jpeg',
+        difficulty: Difficulty.HARD
     },
     {
         id: 20,
         name: 'f6',
-        image: 'images/F6 (Hard).jpeg'
+        image: 'images/F6 (Hard).jpeg',
+        difficulty: Difficulty.HARD
     },
     {
         id: 21,
         name: 'g3',
-        image: 'images/G3 (Hard).jpeg'
+        image: 'images/G3 (Hard).jpeg',
+        difficulty: Difficulty.HARD
     },
     {
         id: 22,
         name: 'g4',
-        image: 'images/G4 (Easy).jpeg'
+        image: 'images/G4 (Easy).jpeg',
+        difficulty: Difficulty.EASY
     },
     {
         id: 23,
         name: 'g5',
-        image: 'images/G5 (Hard).jpeg'
+        image: 'images/G5 (Hard).jpeg',
+        difficulty: Difficulty.HARD
     }
 ]
 
@@ -300,7 +323,7 @@ const Answers: Answer[] =
     {
         id: 44,
         value: '12th fret on G'
-    },
+    }
     
 ]
 
@@ -422,5 +445,27 @@ const CorrectAnswers: CorrectAnswer[] = [
      }
 ]
 
-//generate a list of 10 random questions. 
-//Each question has 4 possible choices, with 1 correct answer. 
+
+
+
+/*
+so just to reiterate
+
+
+you'll need the following
+
+function to build quiz with difficulty setting
+function to build question while respecting difficulty 
+setting from quiz function to build choices for question
+
+
+and the result should be a quiz in plain text, so an object with 10 
+questions and each question having 4 choices.
+
+
+*/
+
+// build an API client that returns a question object
+// 2 kinds of API client.
+
+//choice will inclue ONE correct answer and THREE incorrect answers. 
